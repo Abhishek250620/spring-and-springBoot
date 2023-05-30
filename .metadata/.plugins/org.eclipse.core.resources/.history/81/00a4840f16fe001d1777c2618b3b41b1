@@ -1,0 +1,18 @@
+package com.springfirstproject.multipleconstructor;
+
+public class Employee {
+	private int id;
+	private String name;
+	public Employee(int id) {
+		System.out.println("int const");
+		this.id = id;
+	}
+	public Employee(String name) {
+		System.out.println("String const");
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + "]";
+	}
+}
