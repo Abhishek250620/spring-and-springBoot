@@ -13,6 +13,10 @@ public class App
     {
     	ApplicationContext contex = new ClassPathXmlApplicationContext("springproject/StandAloneCollection/config.xml");
     	Employee emp = contex.getBean("emp",Employee.class);
+//    	System.out.println(emp.getEmail().getClass());
+//    	System.out.println(emp.getName().getClass());
+//    	System.out.println(emp.getProperty().getClass());
+//    	System.out.println(emp.getVehicle().getClass());
     	System.out.println(emp);
     }
 }
