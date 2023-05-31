@@ -25,12 +25,19 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.springfirstproject.multipleconstructor"/>
+			<item value="com.constructor.Employee"/>
+			<item value="com.springfirstproject.Student"/>
 			<item value="com.hibernate.project1"/>
 		</list>
 		<list key="groupId">
+			<item value="springfirstproject"/>
 			<item value="com.hibernate"/>
 		</list>
 		<list key="artifactId">
+			<item value="multipleconstructor"/>
+			<item value="Employee"/>
+			<item value="Student"/>
 			<item value="project1"/>
 		</list>
 		<list key="projectNameTemplate">
