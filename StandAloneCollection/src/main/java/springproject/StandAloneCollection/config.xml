@@ -6,8 +6,8 @@
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
-	 xmlns:util="http://www.springframework.org/schema/util"
-	 
+	xmlns:util="http://www.springframework.org/schema/util"
+
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
@@ -16,14 +16,40 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<!-- autowired using byType <bean class="springproject.autowiring.Student" 
-		name="std" p:usn="123" p:name="Tom" autowire="byType" ></bean> -->
+	<util:list list-class="java.util.ArrayList" id="1">
+		<value>BMW</value>
+		<value>Audi</value>
+		<value>Swift</value>
+		<value>Thar</value>
+		<value>Benz</value>
+	</util:list>
 
-	<context:annotation-config/>  <!-- used to enable the annotation -->
-	<bean class="springproject.autowiring.Student" name="std"
-		p:usn="123" p:name="Tom"></bean>
-	<bean class="springproject.autowiring.Certificate" name="cer1"
-		p:cName="AWSCertificate"></bean>
-	<bean class="springproject.autowiring.Certificate" name="cer2"
-		p:cName="Java Certificate"></bean>
+	<util:set set-class="java.util.HashSet" id="2">
+		<value>asddb@</value>
+		<value>fefb@</value>
+		<value>lkdned@</value>
+		<value>dcldn@</value>
+	</util:set>
+
+	<util:map map-class="java.util.HashMap" id="3">
+		<entry key="Prkash" value="Singh" />
+		<entry key="Prkash" value="Singh" />
+		<entry key="Prkash" value="Singh" />
+		<entry key="Prkash" value="Singh" />
+	</util:map>
+
+	<util:properties id="4">
+		<prop key="driver_class_name">com.mysql.jdbc.Driver</prop>
+		<prop key="url">jdbc:mysql:localhost:3306/db</prop>
+		<prop key="username">root</prop>
+		<prop key="password">root</prop>
+	</util:properties>
+
+	<bean class="springproject.StandAloneCollection.Employee"
+		name="emp">
+		<property name="vehicle" ref="1"></property>
+		<property name="email" ref="2"></property>
+		<property name="name" ref="3"></property>
+		<property name="property" ref="4"></property>
+	</bean>
 </beans>
