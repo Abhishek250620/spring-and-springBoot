@@ -2,7 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -12,13 +11,15 @@
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
-       
-    <!-- autowired using byType <bean class="springproject.autowiring.Student" 
+
+	<!-- autowired using byType <bean class="springproject.autowiring.Student" 
 		name="std" p:usn="123" p:name="Tom" autowire="byType" ></bean> -->
-		
-		<context:annotation-config></context:annotation-config>  <!-- used to enable the annotation -->
+
+	<context:annotation-config/>  <!-- used to enable the annotation -->
 	<bean class="springproject.autowiring.Student" name="std"
-		c:usn="123" c:name="Tom"></bean>
-	<bean class="springproject.autowiring.Certificate" name="cer"
-		c:cName="AWSCertificate"></bean>
+		p:usn="123" p:name="Tom"></bean>
+	<bean class="springproject.autowiring.Certificate" name="cer1"
+		p:cName="AWSCertificate"></bean>
+	<bean class="springproject.autowiring.Certificate" name="cer2"
+		p:cName="Java Certificate"></bean>
 </beans>

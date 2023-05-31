@@ -1,22 +1,23 @@
 package springproject.autowiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Student {
 	private int usn;
 	private String name;
-//	@Autowired
+	
 	private Certificate certificate;
 	public int getUsn() {
 		return usn;
 	}
-	@Autowired
-	public Student(int usn, String name, Certificate certificate) {
-		System.out.println("Injecting using constructor");
-		this.usn = usn;
-		this.name = name;
-		this.certificate = certificate;
-	}
+//	@Autowired
+//	public Student(int usn, String name, Certificate certificate) {
+//		System.out.println("Injecting using constructor");
+//		this.usn = usn;
+//		this.name = name;
+//		this.certificate = certificate;
+//	}
 	public void setUsn(int usn) {
 		this.usn = usn;
 	}
@@ -29,6 +30,8 @@ public class Student {
 	public Certificate getCertificate() {
 		return certificate;
 	}
+	@Qualifier("cer1")
+	@Autowired
 	public void setCertificate(Certificate certificate) {
 		this.certificate = certificate;
 	}
