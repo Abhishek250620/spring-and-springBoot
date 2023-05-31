@@ -10,6 +10,12 @@ public class Certificate {
 	public void setcName(String cName) {
 		this.cName = cName;
 	}
+	
+
+	public Certificate(String cName) {
+		System.out.println("Injecting certificate depencies using Constructor");
+		this.cName = cName;
+	}
 
 	@Override
 	public String toString() {

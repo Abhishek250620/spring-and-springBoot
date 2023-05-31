@@ -5,10 +5,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Student {
 	private int usn;
 	private String name;
-	@Autowired
+//	@Autowired
 	private Certificate certificate;
 	public int getUsn() {
 		return usn;
+	}
+	@Autowired
+	public Student(int usn, String name, Certificate certificate) {
+		System.out.println("Injecting using constructor");
+		this.usn = usn;
+		this.name = name;
+		this.certificate = certificate;
 	}
 	public void setUsn(int usn) {
 		this.usn = usn;
