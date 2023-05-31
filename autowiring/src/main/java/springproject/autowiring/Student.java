@@ -1,8 +1,11 @@
 package springproject.autowiring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 	private int usn;
 	private String name;
+	@Autowired
 	private Certificate certificate;
 	public int getUsn() {
 		return usn;
