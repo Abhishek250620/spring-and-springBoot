@@ -17,4 +17,12 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 	<context:component-scan
 		base-package="springproject.stereotypeannotation" />
+		
+		<util:list list-class="java.util.ArrayList" id="temp">
+		<value>Faf</value>
+		<value>Virat</value>
+		<value>Maxwell</value>
+		<value>ABD</value>
+		</util:list>
+		
 </beans>
