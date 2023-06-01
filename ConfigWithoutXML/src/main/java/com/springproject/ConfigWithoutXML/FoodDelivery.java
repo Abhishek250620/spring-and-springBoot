@@ -12,12 +12,14 @@ public class FoodDelivery {
 	@Value("Prakash")
 	private String custName;
 	
+	private Payment payment;
+	
 	void deliver() {
 		System.out.println("Delivering the order...!!!");
 	}
 	
-	public FoodDelivery() {
-		super();
+	public FoodDelivery(Payment payment) {
+		this.payment=payment;
 	}
 
 	public int getOrderID() {
@@ -32,9 +34,10 @@ public class FoodDelivery {
 	public void setCustName(String custName) {
 		this.custName = custName;
 	}
+
 	@Override
 	public String toString() {
-		return "FoodDelivery [orderID=" + orderID + ", custName=" + custName + "]";
+		return "FoodDelivery [orderID=" + orderID + ", custName=" + custName + ", payment=" + payment + "]";
 	}
 	
 }

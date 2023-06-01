@@ -10,6 +10,11 @@ public class FoodDeliveryConfig {
 
 	@Bean("a")
 	public FoodDelivery foodDel() {
-		return new FoodDelivery();
+		return new FoodDelivery(payment());
+	}
+	
+	@Bean("b")
+	public Payment payment() {
+		return new Payment();
 	}
 }
