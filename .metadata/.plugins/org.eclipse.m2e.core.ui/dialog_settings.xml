@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\EcllipseEE\multipleconstructor\src\main\java\com\springfirstproject\multipleconstructor\config.xml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,20 +26,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.springfirstproject.multipleconstructor"/>
-			<item value="com.constructor.Employee"/>
-			<item value="com.springfirstproject.Student"/>
-			<item value="com.hibernate.project1"/>
+			<item value="com.springproject.ConfigWithoutXML"/>
+			<item value="springproject.StandAloneCollection"/>
+			<item value="springproject.autowiring"/>
 		</list>
 		<list key="groupId">
-			<item value="springfirstproject"/>
-			<item value="com.hibernate"/>
+			<item value="springproject"/>
 		</list>
 		<list key="artifactId">
-			<item value="multipleconstructor"/>
-			<item value="Employee"/>
-			<item value="Student"/>
-			<item value="project1"/>
+			<item value="ConfigWithoutXML"/>
+			<item value="StandAloneCollection"/>
+			<item value="autowiring"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
