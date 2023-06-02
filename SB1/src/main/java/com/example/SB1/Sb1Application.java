@@ -10,8 +10,8 @@ public class Sb1Application {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext c= SpringApplication.run(Sb1Application.class, args);
-		c.getBean("demo",Demo.class).run();
-		
+		PizzaController pizzaCon = c.getBean("pz",PizzaController.class);
+		pizzaCon.dis();
 	}
 
 }
