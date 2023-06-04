@@ -10,7 +10,7 @@ public class StudentController {
 	Student student;
 	
 	@Autowired
-	public StudentController(@Qualifier("student1")Student student) {
+	public StudentController(Student student) {
 		this.student = student;
 	}
 
