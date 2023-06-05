@@ -8,6 +8,8 @@ import com.example.SB1.controller.MyController;
 import com.example.SB1.controller.StudentController;
 import com.example.SB1.lazy.LazyLoader;
 import com.example.SB1.repository.MyRepository;
+import com.example.SB1.scope.ProtoTypeBean;
+import com.example.SB1.scope.SingleTonBean;
 import com.example.SB1.service.MyService;
 
 @SpringBootApplication
@@ -31,6 +33,14 @@ public class Sb1Application {
 		System.out.println(myRepository.hello());
 		
 		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+		
+		SingleTonBean singleTonBean1 = context.getBean(SingleTonBean.class);
+		SingleTonBean singleTonBean2 = context.getBean(SingleTonBean.class);
+		SingleTonBean singleTonBean3 = context.getBean(SingleTonBean.class);
+		
+		ProtoTypeBean protoTypeBean1 = context.getBean(ProtoTypeBean.class);
+		ProtoTypeBean protoTypeBean2 = context.getBean(ProtoTypeBean.class);
+		ProtoTypeBean protoTypeBean3 = context.getBean(ProtoTypeBean.class);
 	}
 
 }
