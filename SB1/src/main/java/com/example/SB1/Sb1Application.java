@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.SB1.controller.MyController;
 import com.example.SB1.controller.StudentController;
+import com.example.SB1.repository.MyRepository;
 import com.example.SB1.service.MyService;
 
 @SpringBootApplication
@@ -24,6 +25,9 @@ public class Sb1Application {
 		
 		MyService myService = context.getBean(MyService.class);
 		System.out.println(myService.hello());
+		
+		MyRepository myRepository = context.getBean(MyRepository.class);
+		System.out.println(myRepository.hello());
 	}
 
 }
