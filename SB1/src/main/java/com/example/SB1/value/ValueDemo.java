@@ -17,46 +17,40 @@ public class ValueDemo {
 	
 	@Value("${mail.password}")
 	private String password;
-	
-	
+
+	@Value("${Java_Home}")
+	private String javaHome;
+
+//	@Value("${HOME}")
+//	private String homeDir;
 	
 	public String getHost() {
 		return host;
 	}
 
-
-
 	public void setHost(String host) {
 		this.host = host;
 	}
-
-
 
 	public String getEmail() {
 		return email;
 	}
 
-
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
 
 	public String getPassword() {
 		return password;
 	}
 
-
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-
-
 	public void meth() {
 		System.out.println(name);
+		System.out.println(javaHome);
+//		System.out.println(homeDir);
 	}
 }
