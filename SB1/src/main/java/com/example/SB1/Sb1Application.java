@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.SB1.controller.MyController;
 import com.example.SB1.controller.StudentController;
+import com.example.SB1.lazy.LazyLoader;
 import com.example.SB1.repository.MyRepository;
 import com.example.SB1.service.MyService;
 
@@ -28,6 +29,8 @@ public class Sb1Application {
 		
 		MyRepository myRepository = context.getBean(MyRepository.class);
 		System.out.println(myRepository.hello());
+		
+		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 	}
 
 }
