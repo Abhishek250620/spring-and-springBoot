@@ -11,6 +11,7 @@ import com.example.SB1.repository.MyRepository;
 import com.example.SB1.scope.ProtoTypeBean;
 import com.example.SB1.scope.SingleTonBean;
 import com.example.SB1.service.MyService;
+import com.example.SB1.value.ValueDemo;
 
 @SpringBootApplication
 public class Sb1Application {
@@ -41,6 +42,9 @@ public class Sb1Application {
 		ProtoTypeBean protoTypeBean1 = context.getBean(ProtoTypeBean.class);
 		ProtoTypeBean protoTypeBean2 = context.getBean(ProtoTypeBean.class);
 		ProtoTypeBean protoTypeBean3 = context.getBean(ProtoTypeBean.class);
+		
+		ValueDemo valueDemo = context.getBean(ValueDemo.class);
+		valueDemo.meth();
 	}
 
 }
