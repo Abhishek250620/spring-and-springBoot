@@ -45,6 +45,9 @@ public class Sb1Application {
 		
 		ValueDemo valueDemo = context.getBean(ValueDemo.class);
 		valueDemo.meth();
+		System.out.println(valueDemo.getHost());
+		System.out.println(valueDemo.getEmail());
+		System.out.println(valueDemo.getPassword());
 	}
 
 }
