@@ -34,8 +34,7 @@ public class BookController {
 		return new Book(1,"Java");
 	}
 	
-	@PostMapping(value = "/books/create", 
-			consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/books/create")
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public Book createBook(@RequestBody Book book) {
 		System.out.println(book.getId());
