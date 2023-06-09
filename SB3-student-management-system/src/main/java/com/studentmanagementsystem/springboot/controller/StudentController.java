@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 
 import com.studentmanagementsystem.springboot.entity.Student;
 import com.studentmanagementsystem.springboot.service.StudentService;
@@ -20,13 +19,13 @@ public class StudentController {
 		this.studentService = studentService;
 	}
 
-	@GetMapping("/students")
+	@GetMapping("/students") // Return students view
 	public String listStudents(Model model) {
 		model.addAttribute("students",studentService.getAllStudents());
 		return "students";
 	}
 	
-	@GetMapping("/students/new")
+	@GetMapping("/students/new") // Return create_student view
 	public String createStudentFrom(Model model) {
 		
 		Student student = new Student();
@@ -34,20 +33,20 @@ public class StudentController {
 		return  "create_student";
 	}
 	
-	@PostMapping("/students")
+	@PostMapping("/students") // save the student Data
 	public String saveStudent(@ModelAttribute("student") Student student) {
 		studentService.saveStudent(student);
 		return "redirect:/students";
 	}
 	
-	@GetMapping("/students/edit/{id}")
+	@GetMapping("/students/edit/{id}") // Return edit_student view
 	public String editStudetForm(@PathVariable Long id, Model model ) {
 		model.addAttribute("student",studentService.getStudentById(id));
 		return "edit_student";
 	}
 	
-	@PostMapping("students/{id}")
-	public String updateStudent(@PathVariable Long id, @ModelAttribute("student") Student student, Model model) {
+	@PostMapping("students/{id}") // Modify student data
+	public String updateStudent(@PathVariable Long id, @ModelAttribute("student") Student student) {
 		
 	Student existingStudent = studentService.getStudentById(id);
 	existingStudent.setId(id);
@@ -60,7 +59,7 @@ public class StudentController {
 	
 	}
 	
-	@GetMapping("students/{id}")
+	@GetMapping("students/{id}") // Delete student data
 	public String deleteStudent(@PathVariable Long id) {
 		studentService.deleteStudentById(id);
 		return "redirect:/students";

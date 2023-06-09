@@ -1,11 +1,9 @@
 INDEX VERSION 1.132+D:\EcllipseEE\.metadata\.plugins\org.eclipse.jdt.core
-2604427777.index
-377572729.index
 4262151905.index
 1831877181.index
-2542102519.index
 2621494915.index
 890195459.index
+2679943064.index
 3116521309.index
 3013897810.index
 2038931609.index
@@ -14,9 +12,7 @@ INDEX VERSION 1.132+D:\EcllipseEE\.metadata\.plugins\org.eclipse.jdt.core
 2661537373.index
 4131368430.index
 1233794182.index
-2448040697.index
 3049283383.index
-1400817193.index
 1865797976.index
 80288335.index
 2145270349.index
